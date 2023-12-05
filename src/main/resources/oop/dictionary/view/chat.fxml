@@ -1,0 +1,195 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.Group?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.BorderPane?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.shape.Rectangle?>
+<?import javafx.scene.text.Font?>
+
+<BorderPane prefHeight="600.0" prefWidth="350.0" xmlns="http://javafx.com/javafx/21" xmlns:fx="http://javafx.com/fxml/1" fx:controller="oop.dictionary.controller.Controller">
+   <bottom>
+      <HBox alignment="CENTER" spacing="10.0" style="-fx-background-color: #9AD9EA;">
+         <HBox>
+            <HBox.margin>
+               <Insets bottom="30.0" left="10.0" right="10.0" top="15.0" />
+            </HBox.margin>
+            <Button fx:id="mediaButton" prefHeight="45.0" prefWidth="45.0" style="-fx-background-color: #9AD9EA;">
+               <graphic>
+                  <ImageView fitHeight="40.0" fitWidth="40.0" pickOnBounds="true" preserveRatio="true">
+                     <Image url="@../image/media.png" />
+                  </ImageView>
+               </graphic>
+            </Button>
+            <Group>
+               <HBox.margin>
+                  <Insets top="3.0" />
+               </HBox.margin>
+               <TextField fx:id="inputField" prefHeight="40.0" prefWidth="250.0" promptText="Type your message here..." />
+               <Rectangle fx:id="sendButton" arcHeight="20.0" arcWidth="20.0" fill="WHITE" height="30.0" layoutX="215.0" layoutY="5.0" stroke="WHITE" width="30.0" />
+               <ImageView fitHeight="30.0" fitWidth="30.0" layoutX="215.0" layoutY="5.0" pickOnBounds="true" preserveRatio="true">
+                  <Image url="@../image/send.png" />
+               </ImageView>
+            </Group>
+            <Button fx:id="voiceButton" prefHeight="45.0" prefWidth="45.0" style="-fx-background-color: #9AD9EA;">
+               <graphic>
+                  <ImageView fitHeight="40.0" fitWidth="40.0" pickOnBounds="true" preserveRatio="true">
+                     <Image url="@../image/voice.png" />
+                  </ImageView>
+               </graphic>
+            </Button>
+         </HBox>
+         <BorderPane.margin>
+            <Insets />
+         </BorderPane.margin>
+      </HBox>
+   </bottom>
+   <top>
+      <VBox fx:id="chatBox" spacing="10.0" style="-fx-background-color: #9AD9EA;" BorderPane.alignment="CENTER">
+         <HBox>
+            <Button fx:id="backButton" alignment="CENTER" contentDisplay="TOP" graphicTextGap="0.0" prefHeight="36.0" prefWidth="36.0" style="-fx-background-color: #9AD9EA;">
+               <graphic>
+                  <ImageView fitHeight="40.0" fitWidth="20.0" pickOnBounds="true" preserveRatio="true">
+                     <Image url="@../image/back.png"/>
+                  </ImageView>
+               </graphic>
+               <HBox.margin>
+                  <Insets left="10.0" />
+               </HBox.margin>
+            </Button>
+            <Group>
+               <HBox.margin>
+                  <Insets left="5.0" />
+               </HBox.margin>
+               <ImageView fitHeight="60.0" fitWidth="60.0" layoutX="1.0" pickOnBounds="true" preserveRatio="true">
+                  <Image url="@../image/avatar.png"/>
+               </ImageView>
+            </Group>
+            <VBox prefHeight="40.0" prefWidth="163.0">
+               <HBox.margin>
+                  <Insets left="10.0" top="10.0"/>
+               </HBox.margin>
+               <Label fx:id="userName" text="Name">
+                  <font>
+                     <Font name="Microsoft PhagsPa Bold" size="16.0"/>
+                  </font>
+               </Label>
+               <HBox>
+                  <ImageView fitHeight="5.0" fitWidth="5.0" pickOnBounds="true" preserveRatio="true">
+                     <HBox.margin>
+                        <Insets right="5.0" top="5.0"/>
+                     </HBox.margin>
+                     <Image url="@../image/online.png"/>
+                  </ImageView>
+                  <Label fx:id="status" text="Online" textFill="#8e8e8e">
+                     <font>
+                        <Font name="Microsoft PhagsPa" size="12.44444465637207"/>
+                     </font>
+                  </Label>
+               </HBox>
+            </VBox>
+            <HBox alignment="CENTER">
+               <Button fx:id="callButton1" alignment="CENTER" contentDisplay="TOP" graphicTextGap="0.0" prefHeight="36.0" prefWidth="36.0" style="-fx-background-color: #9AD9EA;">
+                  <graphic>
+                     <ImageView fitHeight="45.0" fitWidth="43.0" pickOnBounds="true" preserveRatio="true">
+                        <Image url="@../image/call.png"/>
+                     </ImageView>
+                  </graphic>
+               </Button>
+               <Button fx:id="callButton2" prefHeight="36.0" prefWidth="36.0" style="-fx-background-color: #9AD9EA;">
+                  <graphic>
+                     <ImageView fitHeight="45.0" fitWidth="45.0" pickOnBounds="true" preserveRatio="true">
+                        <Image url="@../image/video.png"/>
+                     </ImageView>
+                  </graphic>
+               </Button>
+               <HBox.margin>
+                  <Insets right="10.0" />
+               </HBox.margin>
+            </HBox>
+            <VBox.margin>
+               <Insets bottom="15.0" top="20.0" />
+            </VBox.margin>
+         </HBox>
+         <BorderPane.margin>
+            <Insets />
+         </BorderPane.margin>
+      </VBox>
+   </top>
+   <center>
+      <VBox prefHeight="200.0" prefWidth="100.0" BorderPane.alignment="CENTER">
+         <BorderPane.margin>
+            <Insets left="5.0" right="5.0"/>
+         </BorderPane.margin>
+         <HBox alignment="CENTER" spacing="10.0">
+            <VBox.margin>
+               <Insets top="20.0"/>
+            </VBox.margin>
+            <Group>
+               <Rectangle arcHeight="40.0" arcWidth="40.0" fill="WHITE" height="35.0" stroke="#dfdfdf"
+                          width="75.0"/>
+               <Label fx:id="dayMessage" alignment="CENTER" prefWidth="75.0" text="Today" textAlignment="CENTER">
+                  <padding>
+                     <Insets top="8.0"/>
+                  </padding>
+                  <font>
+                     <Font name="Microsoft PhagsPa" size="14.0"/>
+                  </font>
+               </Label>
+            </Group>
+         </HBox>
+         <HBox spacing="10.0">
+            <Group>
+               <HBox.margin>
+                  <Insets left="10.0" top="20.0"/>
+               </HBox.margin>
+               <Rectangle fx:id="oppBubble" fill="#d67598" height="20.0" stroke="#d67598" width="100.0"/>
+               <Rectangle arcHeight="30.0" arcWidth="30.0" fill="#d67598" height="35.0" stroke="#d67598"
+                          width="250.0"/>
+               <Label fx:id="oppMessage" text="Hello, this is another user's message." textFill="WHITE">
+                  <padding>
+                     <Insets left="12.0" top="8.0"/>
+                  </padding>
+                  <font>
+                     <Font name="Microsoft PhagsPa" size="14.0"/>
+                  </font>
+               </Label>
+            </Group>
+         </HBox>
+         <HBox alignment="TOP_RIGHT" spacing="10.0">
+            <Group>
+               <HBox.margin>
+                  <Insets right="10.0" top="20.0"/>
+               </HBox.margin>
+               <Rectangle fx:id="yourBubble" fill="#635be2" height="20.0" layoutX="170.0"
+                          nodeOrientation="LEFT_TO_RIGHT" stroke="#635be2" width="20.0"/>
+               <Rectangle arcHeight="30.0" arcWidth="30.0" fill="#635be2" height="35.0" stroke="#635be2"
+                          width="190.0"/>
+               <Label fx:id="yourMessage" text="Hello, this is your message." textFill="WHITE">
+                  <padding>
+                     <Insets left="12.0" top="8.0"/>
+                  </padding>
+                  <font>
+                     <Font name="Microsoft PhagsPa" size="14.0"/>
+                  </font>
+               </Label>
+            </Group>
+         </HBox>
+         <Label fx:id="sendInformation" alignment="CENTER_RIGHT" contentDisplay="CENTER" nodeOrientation="LEFT_TO_RIGHT"
+                prefHeight="20.0" prefWidth="380.0" text="Sent">
+            <font>
+               <Font name="Microsoft PhagsPa" size="12.44444465637207"/>
+            </font>
+            <VBox.margin>
+               <Insets right="20.0"/>
+            </VBox.margin>
+         </Label>
+      </VBox>
+   </center>
+</BorderPane>
